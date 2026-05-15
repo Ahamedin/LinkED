@@ -81,11 +81,11 @@ const TestimonialCards = ({ testimonials }) => {
                     <a
                       href={testimonial.contacts?.github || "#"}
                       target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-zinc-700 hover:text-black transition-colors group/link"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors group/link"
                     >
-                      <Github className="h-3 w-3 sm:h-4 sm:w-4 text-zinc-400 group-hover/link:text-black transition-colors shrink-0" />
-                      <span className="truncate">
+                      <Github className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500 group-hover/link:text-blue-700 transition-colors shrink-0" />
+                      <span className="truncate underline">
                         {testimonial.contacts?.github
                           ? testimonial.contacts.github.replace("https://", "")
                           : "GitHub — coming soon"}
@@ -95,11 +95,11 @@ const TestimonialCards = ({ testimonials }) => {
                     <a
                       href={testimonial.contacts?.portfolio || "#"}
                       target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-zinc-700 hover:text-black transition-colors group/link"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors group/link"
                     >
-                      <Globe className="h-3 w-3 sm:h-4 sm:w-4 text-zinc-400 group-hover/link:text-black transition-colors shrink-0" />
-                      <span className="truncate">
+                      <Globe className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500 group-hover/link:text-blue-700 transition-colors shrink-0" />
+                      <span className="truncate underline">
                         {testimonial.contacts?.portfolio
                           ? testimonial.contacts.portfolio.replace("https://", "")
                           : "Portfolio — coming soon"}
@@ -109,11 +109,11 @@ const TestimonialCards = ({ testimonials }) => {
                     <a
                       href={testimonial.contacts?.leetcode || "#"}
                       target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-zinc-700 hover:text-black transition-colors group/link"
+                      rel="noreferrer"
+                      className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors group/link"
                     >
-                      <Code2 className="h-3 w-3 sm:h-4 sm:w-4 text-zinc-400 group-hover/link:text-black transition-colors shrink-0" />
-                      <span className="truncate">
+                      <Code2 className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500 group-hover/link:text-blue-700 transition-colors shrink-0" />
+                      <span className="truncate underline">
                         {testimonial.contacts?.leetcode
                           ? testimonial.contacts.leetcode.replace("https://", "")
                           : "LeetCode — coming soon"}

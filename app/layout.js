@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-NNGSLBEB2L');
           `}} />
         </head>
-        <body className={`${inter.className}`}>
+        <body className={`${inter.className} flex flex-col min-h-screen`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
@@ -39,7 +40,8 @@ export default function RootLayout({ children }) {
             disableTransitionOnChange
           >
             <Header />
-            <main className="min-h-screen">{children}</main>
+            <main className="flex-1">{children}</main>
+            <Footer />
             <Toaster richColors />
           </ThemeProvider>
         </body>
