@@ -9,20 +9,20 @@ export default async function CoverLetterPage() {
 
   return (
     <div className="bg-[#F8F6F1] min-h-screen">
-      <div className="container mx-auto px-6 md:px-10 py-8">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 py-6 sm:py-8">
 
-        <div className="border-b-2 border-black pb-4 mb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+        <div className="border-b-2 border-black pb-4 mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <div>
             <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-400 block mb-1">
               Career Tools
             </span>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-black leading-none uppercase">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-black leading-none uppercase">
               My Cover<br />Letters
             </h1>
           </div>
           <Link href="/ai-cover-letter/new">
-            <Button className="bg-black text-white hover:bg-zinc-800 font-black rounded-none text-xs tracking-widest uppercase px-6 h-10">
-              <Plus className="h-4 w-4 mr-2" />
+            <Button className="bg-black text-white hover:bg-zinc-800 font-black rounded-none text-xs tracking-widest uppercase px-4 sm:px-6 h-9 sm:h-10 w-full sm:w-auto">
+              <Plus className="h-3 sm:h-4 w-3 sm:w-4 mr-2" />
               Create New
             </Button>
           </Link>

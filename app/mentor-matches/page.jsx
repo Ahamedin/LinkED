@@ -29,16 +29,16 @@ function MentorMatchesContent() {
   if (loading) return <BarLoader width="100%" />;
 
   return (
-    <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto space-y-10">
+    <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 max-w-7xl mx-auto space-y-8 sm:space-y-10">
 
       {/* STUDENT SUMMARY */}
       <Card>
-        <CardContent className="p-6">
-          <h2 className="text-xl font-semibold mb-2">
+        <CardContent className="p-4 sm:p-6">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">
             Student Profile Summary
           </h2>
 
-          <p className="text-muted-foreground">
+          <p className="text-xs sm:text-sm text-muted-foreground">
             {result.studentSummary}
           </p>
         </CardContent>
@@ -46,11 +46,11 @@ function MentorMatchesContent() {
 
       {/* MATCHED MENTORS */}
       <div>
-        <h2 className="text-3xl font-bold mb-6">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">
           Recommended Mentors
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {result.matches.map((match) => {
             const mentor = mentors.find(
               (m) => m.id === match.mentorId
@@ -61,21 +61,21 @@ function MentorMatchesContent() {
                 <MentorCard mentor={mentor} />
 
                 <Card>
-                  <CardContent className="p-4 space-y-2">
-                    <p className="text-sm">
+                  <CardContent className="p-3 sm:p-4 space-y-2">
+                    <p className="text-xs sm:text-sm">
                       <strong>Why this mentor?</strong>
                       <br />
                       {match.reason}
                     </p>
 
-                    <p className="text-sm font-semibold text-green-600">
+                    <p className="text-xs sm:text-sm font-semibold text-green-600">
                       Match Score: {match.matchScore}%
                     </p>
 
                     <div>
-                      <strong>Career Suggestions:</strong>
+                      <strong className="text-xs sm:text-sm">Career Suggestions:</strong>
 
-                      <ul className="list-disc list-inside text-sm mt-1">
+                      <ul className="list-disc list-inside text-xs sm:text-sm mt-1">
                         {match.careerSuggestions.map((tip, i) => (
                           <li key={i}>{tip}</li>
                         ))}

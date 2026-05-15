@@ -54,50 +54,50 @@ const MentorProfilePage = () => {
 
   return (
     <div className="bg-[#F8F6F1] min-h-screen">
-      <section className="pt-28 pb-20 px-6 max-w-4xl mx-auto space-y-0">
+      <section className="pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 max-w-4xl mx-auto space-y-0">
 
         {/* ===== HEADER ===== */}
-        <div className="bg-white border border-zinc-200 p-8 mb-px">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="bg-white border border-zinc-200 p-4 sm:p-8 mb-px">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 items-start">
             <Image
               src={mentor.profile_picture_url}
               alt={mentor.name}
               width={120}
               height={120}
-              className="rounded-none border border-zinc-200 flex-shrink-0"
+              className="rounded-none border border-zinc-200 flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-cover"
             />
             <div className="flex-1 space-y-3">
-              <div className="flex flex-wrap items-center gap-3">
-                <h1 className="text-3xl font-black tracking-tighter text-black leading-none">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <h1 className="text-2xl sm:text-3xl font-black tracking-tighter text-black leading-none">
                   {mentor.name}
                 </h1>
                 {mentor.metadata?.public_figure && (
-                  <span className="text-[10px] font-bold tracking-[0.2em] uppercase bg-black text-white px-3 py-1">
+                  <span className="text-[10px] font-bold tracking-[0.2em] uppercase bg-black text-white px-2 sm:px-3 py-1">
                     Verified
                   </span>
                 )}
               </div>
-              <p className="text-zinc-700 font-semibold text-base">
+              <p className="text-sm sm:text-base text-zinc-700 font-semibold">
                 {mentor.professional_background.current_position}
               </p>
-              <p className="text-zinc-500 text-sm">
+              <p className="text-xs sm:text-sm text-zinc-500">
                 {mentor.professional_background.organization}
               </p>
-              <p className="text-xs text-zinc-400 font-medium tracking-wide">
+              <p className="text-[10px] sm:text-xs text-zinc-400 font-medium tracking-wide">
                 {mentor.location} · {mentor.gender}
               </p>
               <div className="pt-2">
                 {booked ? (
                   <Button
                     variant="outline"
-                    className="border-red-600 text-red-600 hover:bg-red-50 font-black rounded-none text-sm px-6"
+                    className="border-red-600 text-red-600 hover:bg-red-50 font-black rounded-none text-xs sm:text-sm px-4 sm:px-6 h-8 sm:h-10 w-full sm:w-auto"
                     onClick={handleCancelBooking}
                   >
                     Cancel Booking
                   </Button>
                 ) : (
                   <Button
-                    className="bg-black text-white hover:bg-zinc-800 font-black rounded-none text-sm px-8"
+                    className="bg-black text-white hover:bg-zinc-800 font-black rounded-none text-xs sm:text-sm px-4 sm:px-8 h-8 sm:h-10 w-full sm:w-auto"
                     onClick={() => setShowForm(true)}
                   >
                     Book This Mentor
@@ -114,13 +114,13 @@ const MentorProfilePage = () => {
             title: "Professional Background",
             content: (
               <>
-                <p className="text-zinc-700 text-sm leading-relaxed mb-4">
+                <p className="text-xs sm:text-sm text-zinc-700 leading-relaxed mb-4">
                   {mentor.professional_background.years_of_experience}+ years of experience across{" "}
                   {mentor.professional_background.industries.join(", ")}.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {mentor.professional_background.skills.map((skill, i) => (
-                    <span key={i} className="text-xs font-bold px-3 py-1 border border-zinc-300 text-zinc-700 bg-zinc-50">
+                    <span key={i} className="text-[10px] font-bold px-2 sm:px-3 py-1 border border-zinc-300 text-zinc-700 bg-zinc-50">
                       {skill}
                     </span>
                   ))}
@@ -131,7 +131,7 @@ const MentorProfilePage = () => {
           {
             title: "Mentorship Details",
             content: (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-2">
                 {[
                   { label: "Expertise", value: mentor.mentorship_details.areas_of_expertise.join(", ") },
                   { label: "Mode", value: mentor.mentorship_details.preferred_mentorship_mode },
@@ -141,7 +141,7 @@ const MentorProfilePage = () => {
                 ].map(({ label, value }) => (
                   <div key={label} className="space-y-0.5">
                     <p className="text-[10px] font-black tracking-widest uppercase text-zinc-400">{label}</p>
-                    <p className="text-sm text-zinc-800 font-medium">{value}</p>
+                    <p className="text-xs sm:text-sm text-zinc-800 font-medium">{value}</p>
                   </div>
                 ))}
               </div>
@@ -152,13 +152,13 @@ const MentorProfilePage = () => {
             content: (
               <div className="space-y-3">
                 {mentor.education.map((edu, i) => (
-                  <div key={i} className="flex gap-4 items-start border-b border-zinc-100 pb-3 last:border-0">
-                    <span className="text-[10px] font-black tracking-widest uppercase text-zinc-400 mt-1 w-10 shrink-0">
+                  <div key={i} className="flex gap-3 sm:gap-4 items-start border-b border-zinc-100 pb-3 last:border-0">
+                    <span className="text-[10px] font-black tracking-widest uppercase text-zinc-400 mt-1 w-8 sm:w-10 shrink-0">
                       {edu.year}
                     </span>
                     <div>
-                      <p className="font-black text-sm text-zinc-900">{edu.degree}</p>
-                      <p className="text-xs text-zinc-500">{edu.institution}</p>
+                      <p className="font-black text-xs sm:text-sm text-zinc-900">{edu.degree}</p>
+                      <p className="text-[10px] sm:text-xs text-zinc-500">{edu.institution}</p>
                     </div>
                   </div>
                 ))}
@@ -214,7 +214,7 @@ const MentorProfilePage = () => {
             ),
           },
         ].map(({ title, content }) => (
-          <div key={title} className="bg-white border border-zinc-200 border-t-0 p-8">
+          <div key={title} className="bg-white border border-zinc-200 border-t-0 p-4 sm:p-8">
             <h2 className="text-[10px] font-black tracking-[0.2em] uppercase text-zinc-400 mb-4">
               {title}
             </h2>
@@ -224,17 +224,17 @@ const MentorProfilePage = () => {
 
         {/* ===== BOOKING MODAL ===== */}
         {showForm && (
-          <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4">
+          <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-4 py-8">
             <div className="bg-white w-full max-w-md">
               {/* Modal header */}
-              <div className="border-b-2 border-black p-6">
+              <div className="border-b-2 border-black p-4 sm:p-6">
                 <p className="text-[10px] font-black tracking-[0.2em] uppercase text-zinc-400 mb-1">Session</p>
-                <h2 className="text-2xl font-black tracking-tighter text-black uppercase">
+                <h2 className="text-xl sm:text-2xl font-black tracking-tighter text-black uppercase">
                   Book Mentor
                 </h2>
               </div>
 
-              <form onSubmit={handleBookingSubmit} className="p-6 space-y-4">
+              <form onSubmit={handleBookingSubmit} className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                 {[
                   { placeholder: "Your Full Name", field: "name" },
                   { placeholder: "Your Education", field: "education" },

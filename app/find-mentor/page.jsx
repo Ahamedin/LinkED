@@ -35,16 +35,16 @@ const handleSubmit = async (e) => {
 };
 
   return (
-    <section className="pt-32 pb-20 px-6 max-w-3xl mx-auto">
-      <h1 className="text-4xl font-bold text-center mb-8">
+    <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 max-w-3xl mx-auto">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8">
         Find Your Mentor
       </h1>
 
-      <form onSubmit={handleSubmit} className="space-y-8">
+      <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
 
         {/* ===== NAME ===== */}
         <div>
-          <label className="font-medium">Full Name</label>
+          <label className="text-sm font-medium">Full Name</label>
           <Input
             placeholder="Enter your full name"
             onChange={(e) => handleChange("name", e.target.value)}
@@ -53,7 +53,7 @@ const handleSubmit = async (e) => {
 
         {/* ===== EDUCATION ===== */}
         <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Education Details</h2>
+          <h2 className="text-lg sm:text-xl font-semibold">Education Details</h2>
 
           <Select onValueChange={(v) => handleChange("educationLevel", v)}>
             <SelectTrigger>
@@ -84,7 +84,7 @@ const handleSubmit = async (e) => {
 
         {/* ===== SKILLS ===== */}
         <div className="space-y-4">
-          <h2 className="text-xl font-semibold">Skills</h2>
+          <h2 className="text-lg sm:text-xl font-semibold">Skills</h2>
 
           <Input
             placeholder="Technical Skills (comma separated)"

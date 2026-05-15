@@ -73,7 +73,7 @@ const OnboardingForm = ({ industries = industriesData }) => {
   const watchIndustry = watch("industry");
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#F8F6F1] px-4">
+    <div className="flex items-center justify-center min-h-screen bg-[#F8F6F1] px-4 py-8">
       <div className="w-full max-w-lg">
 
         {/* Editorial header above card */}
@@ -81,13 +81,13 @@ const OnboardingForm = ({ industries = industriesData }) => {
           <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-400 block mb-2">
             Getting Started
           </span>
-          <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-black leading-none uppercase">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-black leading-none uppercase">
             Complete Your<br />Profile
           </h1>
         </div>
 
-        <div className="bg-white border border-zinc-200 p-8">
-          <p className="text-sm text-zinc-600 mb-8 leading-relaxed">
+        <div className="bg-white border border-zinc-200 p-6 sm:p-8">
+          <p className="text-xs sm:text-sm text-zinc-600 mb-6 sm:mb-8 leading-relaxed">
             Select your industry to get personalized career insights and recommendations.
           </p>
 

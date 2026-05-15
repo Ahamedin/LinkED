@@ -21,12 +21,12 @@ export default function Home() {
       <HeroSection />
 
       {/* Features Section */}
-      <section className="w-full py-20 md:py-32 bg-[#F8F6F1]">
-        <div className="container mx-auto px-6 md:px-10">
+      <section className="w-full py-12 md:py-20 lg:py-32 bg-[#F8F6F1]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10">
 
           {/* Editorial header */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b-2 border-black pb-4 mb-16 gap-4">
-            <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-black leading-none uppercase">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b-2 border-black pb-4 mb-8 md:mb-16 gap-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-black leading-none uppercase">
               What We<br />Offer
             </h2>
             <p className="text-sm text-zinc-500 max-w-xs md:text-right leading-relaxed">
@@ -34,11 +34,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-black border border-black max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black border border-black max-w-6xl mx-auto">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-[#F8F6F1] p-8 flex flex-col gap-5 hover:bg-black hover:text-white group transition-colors duration-300 cursor-default"
+                className="bg-[#F8F6F1] p-6 sm:p-8 flex flex-col gap-5 hover:bg-black hover:text-white group transition-colors duration-300 cursor-default"
               >
                 <div className="text-black group-hover:text-white transition-colors">
                   {feature.icon}
@@ -47,10 +47,10 @@ export default function Home() {
                   <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-zinc-400 group-hover:text-zinc-400 block mb-2">
                     0{index + 1}
                   </span>
-                  <h3 className="text-lg font-black tracking-tight text-black group-hover:text-white leading-snug mb-3">
+                  <h3 className="text-base sm:text-lg font-black tracking-tight text-black group-hover:text-white leading-snug mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-zinc-600 group-hover:text-zinc-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-zinc-600 group-hover:text-zinc-300 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -61,8 +61,8 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="w-full bg-black py-12">
-        <div className="container mx-auto px-6 md:px-10">
+      <section className="w-full bg-black py-8 sm:py-10 md:py-12">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-0 divide-x divide-zinc-700">
             {[
               { value: "50+", label: "Industries Covered" },
@@ -84,11 +84,11 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="w-full py-20 md:py-32 bg-white">
-        <div className="container mx-auto px-6 md:px-10">
+      <section className="w-full py-12 md:py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10">
 
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b-2 border-black pb-4 mb-16 gap-4">
-            <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-black leading-none uppercase">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b-2 border-black pb-4 mb-8 md:mb-16 gap-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-black leading-none uppercase">
               How It<br />Works
             </h2>
             <p className="text-sm text-zinc-500 max-w-xs md:text-right leading-relaxed">
@@ -96,9 +96,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 divide-y md:divide-y-0 md:divide-x divide-zinc-200 border border-zinc-200">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-zinc-200 border border-zinc-200">
             {howItWorks.map((item, index) => (
-              <div key={index} className="p-8 flex flex-col gap-4 relative group hover:bg-zinc-50 transition-colors">
+              <div key={index} className="p-6 sm:p-8 flex flex-col gap-4 relative group hover:bg-zinc-50 transition-colors">
                 <span className="text-[80px] font-black text-zinc-300 leading-none select-none absolute top-4 right-6 group-hover:text-zinc-200 transition-colors">
                   {index + 1}
                 </span>
@@ -120,11 +120,11 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="w-full py-20 md:py-32 bg-[#F8F6F1]">
-        <div className="container mx-auto px-6 md:px-10">
+      <section className="w-full py-12 md:py-20 lg:py-32 bg-[#F8F6F1]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10">
 
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b-2 border-black pb-4 mb-16 gap-4">
-            <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-black leading-none uppercase">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between border-b-2 border-black pb-4 mb-8 md:mb-16 gap-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-black leading-none uppercase">
               Real<br />Stories
             </h2>
             <p className="text-sm text-zinc-500 max-w-xs md:text-right leading-relaxed">
@@ -137,12 +137,12 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="w-full py-20 md:py-32 bg-white">
-        <div className="container mx-auto px-6 md:px-10">
+      <section className="w-full py-12 md:py-20 lg:py-32 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10">
           <div className="max-w-3xl mx-auto">
 
-            <div className="border-b-2 border-black pb-4 mb-12">
-              <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-black leading-none uppercase">
+            <div className="border-b-2 border-black pb-4 mb-8 md:mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-black leading-none uppercase">
                 Questions
               </h2>
             </div>
@@ -172,25 +172,25 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="w-full bg-black">
-        <div className="container mx-auto px-6 md:px-10 py-24 md:py-36">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10 py-16 sm:py-24 md:py-36">
           <div className="max-w-4xl mx-auto">
-            <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-500 mb-6">
+            <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-500 mb-4 sm:mb-6">
               Begin Today
             </p>
-            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none uppercase mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white tracking-tighter leading-none uppercase mb-6 sm:mb-8">
               Ready to<br />
               <span className="text-zinc-400">Accelerate</span><br />
               Your Career?
             </h2>
-            <p className="text-zinc-400 text-base md:text-lg max-w-md mb-12 leading-relaxed">
+            <p className="text-zinc-400 text-sm sm:text-base md:text-lg max-w-md mb-8 sm:mb-12 leading-relaxed">
               Join thousands of professionals who are advancing their careers with AI-powered guidance.
             </p>
             <Link href="/dashboard">
               <Button
                 size="lg"
-                className="h-14 bg-white text-black hover:bg-zinc-100 font-black text-base px-10 rounded-none tracking-tight uppercase"
+                className="h-12 sm:h-14 bg-white text-black hover:bg-zinc-100 font-black text-sm sm:text-base px-6 sm:px-10 rounded-none tracking-tight uppercase"
               >
-                Start Your Journey <ArrowRight className="ml-3 h-5 w-5" />
+                Start Your Journey <ArrowRight className="ml-2 sm:ml-3 h-4 sm:h-5 w-4 sm:w-5" />
               </Button>
             </Link>
           </div>

@@ -27,14 +27,14 @@ const BookedMentorsSection = () => {
 
   if (bookedMentors.length === 0) {
     return (
-      <section className="w-full py-20 bg-[#F8F6F1]">
-        <div className="container mx-auto px-6 md:px-10 max-w-3xl">
-          <div className="border-b-2 border-black pb-4 mb-10">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black uppercase leading-none">
+      <section className="w-full py-12 sm:py-16 md:py-20 bg-[#F8F6F1]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-10 max-w-3xl">
+          <div className="border-b-2 border-black pb-4 mb-8 sm:mb-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-black uppercase leading-none">
               Booked<br />Mentors
             </h2>
           </div>
-          <div className="bg-white border border-zinc-200 p-10 text-center">
+          <div className="bg-white border border-zinc-200 p-6 sm:p-10 text-center">
             <p className="text-[10px] font-black tracking-[0.3em] uppercase text-zinc-400 mb-3">Empty</p>
             <p className="text-zinc-700 font-medium text-sm leading-relaxed">
               You haven't booked a mentor yet.
@@ -49,11 +49,11 @@ const BookedMentorsSection = () => {
   }
 
   return (
-    <section className="w-full py-20 bg-[#F8F6F1]">
-      <div className="container mx-auto px-6 md:px-10 max-w-5xl">
+    <section className="w-full py-12 sm:py-16 md:py-20 bg-[#F8F6F1]">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 max-w-5xl">
 
-        <div className="border-b-2 border-black pb-4 mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-black uppercase leading-none">
+        <div className="border-b-2 border-black pb-4 mb-8 sm:mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-black uppercase leading-none">
             Booked<br />Mentors
           </h2>
           <p className="text-xs font-bold tracking-widest uppercase text-zinc-400">
@@ -61,7 +61,7 @@ const BookedMentorsSection = () => {
           </p>
         </div>
 
-        <div className="grid gap-px bg-black border border-black sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-px bg-black border border-black grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {bookedMentors.map((mentor) => (
             <div
               key={mentor.id}

@@ -24,21 +24,21 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="w-full pt-36 md:pt-48 pb-10 bg-[#F8F6F1]">
-      <div className="space-y-8 text-center px-4">
+    <section className="w-full pt-20 sm:pt-32 md:pt-40 lg:pt-48 pb-8 sm:pb-10 bg-[#F8F6F1]">
+      <div className="space-y-6 sm:space-y-8 text-center px-4">
 
         {/* Eyebrow label */}
-        <span className="inline-block text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-500 border border-zinc-300 px-4 py-1.5">
+        <span className="inline-block text-[10px] font-bold tracking-[0.3em] uppercase text-zinc-500 border border-zinc-300 px-3 sm:px-4 py-1.5">
           AI-Powered Career Platform
         </span>
 
-        <div className="space-y-5 mx-auto">
-          <h1 className="text-5xl font-black md:text-6xl lg:text-7xl xl:text-8xl gradient-title tracking-tighter leading-none">
+        <div className="space-y-4 sm:space-y-5 mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black gradient-title tracking-tighter leading-none">
             From Student to Job-Ready
             <br />
             With the Right Mentor
           </h1>
-          <p className="mx-auto max-w-[560px] text-zinc-600 md:text-lg font-medium leading-relaxed">
+          <p className="mx-auto max-w-[560px] text-sm sm:text-base md:text-lg text-zinc-600 font-medium leading-relaxed">
             Every student needs guidance before stepping into their career.
             We connect learners with expert mentors and AI-driven tools to
             prepare, practice, and succeed in the job market.
@@ -46,31 +46,31 @@ const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/find-mentor">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-2 sm:gap-3">
+          <Link href="/find-mentor" className="flex-1 sm:flex-none">
             <Button
               size="lg"
-              className="px-8 h-11 bg-black text-white hover:bg-zinc-800 font-bold rounded-none text-sm tracking-tight"
+              className="w-full sm:w-auto px-6 sm:px-8 h-10 sm:h-11 bg-black text-white hover:bg-zinc-800 font-bold rounded-none text-xs sm:text-sm tracking-tight"
             >
               Find Your Mentor
             </Button>
           </Link>
 
-          <Link href="/mentors">
+          <Link href="/mentors" className="flex-1 sm:flex-none">
             <Button
               size="lg"
               variant="outline"
-              className="px-8 h-11 border-zinc-900 text-zinc-900 hover:bg-zinc-100 font-bold rounded-none text-sm tracking-tight"
+              className="w-full sm:w-auto px-6 sm:px-8 h-10 sm:h-11 border-zinc-900 text-zinc-900 hover:bg-zinc-100 font-bold rounded-none text-xs sm:text-sm tracking-tight"
             >
               Mentors Profile
             </Button>
           </Link>
 
-          <Link href="/booked-mentors">
+          <Link href="/booked-mentors" className="flex-1 sm:flex-none">
             <Button
               size="lg"
               variant="outline"
-              className="px-8 h-11 border-zinc-300 text-zinc-700 hover:bg-zinc-100 font-bold rounded-none text-sm tracking-tight"
+              className="w-full sm:w-auto px-6 sm:px-8 h-10 sm:h-11 border-zinc-300 text-zinc-700 hover:bg-zinc-100 font-bold rounded-none text-xs sm:text-sm tracking-tight"
             >
               Booked Mentors
             </Button>
@@ -78,7 +78,7 @@ const HeroSection = () => {
         </div>
 
         {/* Hero image */}
-        <div className="hero-image-wrapper mt-5 md:mt-0">
+        <div className="hero-image-wrapper mt-4 sm:mt-6 md:mt-8">
           <div ref={imageRef} className="hero-image">
             <Image
               src="/linkEDBanner.png"
