@@ -40,7 +40,7 @@ export default function Home() {
                 key={index}
                 className="bg-[#F8F6F1] p-6 sm:p-8 flex flex-col gap-5 hover:bg-black hover:text-white group transition-colors duration-300 cursor-default"
               >
-                <div className="text-black group-hover:text-white transition-colors">
+                <div className="text-black group-hover:text-white transition-colors [&_svg]:stroke-current [&_svg]:fill-current">
                   {feature.icon}
                 </div>
                 <div>
